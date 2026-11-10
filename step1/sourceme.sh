@@ -1,5 +1,5 @@
 #!/bin/bash
-export BLISLAB_DIR=.
+export BLISLAB_DIR=$(pwd)
 echo "BLISLAB_DIR = $BLISLAB_DIR"
 
 # Compiler Options (true: Intel compiler; false: GNU compilers)
@@ -11,12 +11,12 @@ export BLISLAB_USE_BLAS=true
 echo "BLISLAB_USE_BLAS = $BLISLAB_USE_BLAS"
 
 # Optimization Level (O0, O1, O2, O3)
-export COMPILER_OPT_LEVEL=O3
+export COMPILER_OPT_LEVEL=O0
 echo "COMPILER_OPT_LEVEL = $COMPILER_OPT_LEVEL"
 
 # Manually set the BLAS path if BLIS_USE_BLAS=true and using GNU compiler.
 #export BLAS_DIR=/u/jianyu/lib/blis
-export BLAS_DIR=/u/jianyu/lib/openblas
+export BLAS_DIR=/usr/local
 echo "BLAS_DIR = $BLAS_DIR"
 
 # Parallel Options
